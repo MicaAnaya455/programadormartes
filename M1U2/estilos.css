@@ -1,0 +1,61 @@
+body {
+    background-color: #9c9c9c;
+
+
+}
+
+.titulo {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #1c1c1c;
+    text-align: center;
+    background-color: lightslategray;
+    border-radius: 30px;
+
+}
+
+h2,
+h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #1c1c1c;
+}
+
+p,
+li {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #1c1c1c;
+}
+
+img {
+    height: 180px;
+
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 15px;
+
+}
+
+.datospersonales {
+
+    position: relative;
+    left: 200px;
+    top: -204px;
+    font-size: 15px;
+
+}
+
+.sobremi {
+    position: absolute;
+    top: 270px;
+}
+
+.contenedor {
+
+    display: flex;
+    justify-content: space-around;
+
+
+}
+
+.formulario {
+    font-size: 20px;
+
+}
