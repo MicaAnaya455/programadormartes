@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea</title>
+   
+</head>
+
+<body>
+    <h1>Unidad 4</h1>
+    <h2>Ejercicio 1</h2>
+    <script type="text/javascript">
+
+        var d = prompt("Ingrese la distancia" + "");
+        d = parseInt(d);
+        if (d <= 1000) {
+            document.write("Usted deberia ir a pie")
+        } else {
+            if (d > 1000 && d <= 10000) {
+                document.write("Usted deberia ir en bicicleta")
+            } else {
+                if (d > 10000 && d <= 30000) {
+                    document.write("Usted deberia ir en colectivo")
+                } else {
+                    if (d > 30000 && d <= 100000) {
+                        document.write("Usted deberia ir en auto")
+                    } else {
+                       if(d>100000){
+                        document.write("Usted deberia ir en avión")
+                       }else{
+                        alert("por favor ingrese un valor númerico")
+                       }
+                    }
+                }
+            }
+        }
+
+
+    </script>
+
+    <h2>Ejercicio 2</h2>
+
+    <script type="text/javascript">
+       
+        var array = [2,15,80,90,27,8,10,4];
+        document.write(array);
+        for(var i=0;i<array.length;i++){
+            
+        }
+        
+  </script>
+</body>
+
+</html>
