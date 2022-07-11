@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Color</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <div class="contenedor">
+        <div id="box1"></div>
+        <div id="box2"></div>
+        <div id="box3"></div>
+    </div>
+
+<script>
+    var box1 = document.getElementById("box1");
+    var box2 = document.getElementById("box2");
+    var box3 = document.getElementById("box3");
+    var body = document.querySelector("body")
+    box1.addEventListener("click", function(){
+        body.style.backgroundColor = "lightblue"; 
+    })
+    box2.addEventListener("click", function(){
+        body.style.backgroundColor = "#D556DB";
+    })
+    box3.addEventListener("click", function(){
+        body.style.backgroundColor = "#94D955";
+    })
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

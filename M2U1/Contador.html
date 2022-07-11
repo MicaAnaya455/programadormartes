@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Caracteres</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body class="body">
+   <h1 class="h1">Contador de Caracteres</h1>
+    <div class="padre">
+        <p>
+            <textarea name="contador" id="caracteres" cols="30" rows="10" maxlength="300"></textarea></label>
+        </p>
+        <div id="contador">0/100</div>
+    </div>
+
+    <script>
+
+        var caracteres = document.getElementById("caracteres");
+        var contador = document.getElementById("contador");
+        caracteres.addEventListener("input", function (e) {
+            var target = e.target;
+            var longitudMax = target.getAttribute('maxlength');
+            var longitudAct = target.value.length;
+            contador.innerHTML = `${longitudAct}/${longitudMax}`;
+        });
+
+
+    </script>
+
+
+</body>
+
+</html>
