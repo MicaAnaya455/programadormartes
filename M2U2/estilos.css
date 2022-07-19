@@ -1,0 +1,36 @@
+body {
+    background-color: #c1c1c185;
+}
+button{
+    background-color: antiquewhite;
+}
+.container {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.d-block{
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.col {
+    justify-content: center;
+    
+
+}
+
+
+a {
+    text-decoration: none;
+    color: lightblue;
+    cursor: pointer;
+}
+.card-img-top{
+    width: 160px;
+    margin-left: auto; 
+    margin-right: auto;
+    
+    padding: 10px;
+}
