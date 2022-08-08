@@ -22,7 +22,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top ">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">DON ANTONIO</a>
+            <a class="navbar-brand" href="index.html">DON ANTONIO</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -31,24 +31,28 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#" target="">Nuestra Historia</a>
+                        <a class="nav-link active" aria-current="page" href="historia.html" target="">Nuestra
+                            Historia</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="index.html#productos">PRODUCTOS</a>
                     </li>
-
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
-
+    <!--Fin barra navegación-->
+    <!--INICIO QUIENES SOMOS Y DONDE ENCONTRARNOS-->
     <div class="container">
-        <div id="div1" class="row" >
-            <img class="logo"src="img/logo.png" >
+        <div id="div1" class="row">
+            <img class="logo" src="img/logo.png">
             <h1 class="titulo">DON ANTONIO</h1>
             <h2>Fábrica de Pastas</h2>
 
-            <div id="fondo"class="col" style="padding: 20px;">
+            <div class="col" style="padding: 20px;">
                 <h2>¿Quienes somos?</h2>
                 <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo possimus atque optio beatae porro eos
                     a
@@ -57,14 +61,19 @@
             </div>
             <div class="col-md-5 offset-md-2 py-3">
                 <h2>¿Donde Encontrarnos?</h2>
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3350.619368818411!2d-62.6792131!3d-32.8817889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95c950f94c6685a1%3A0xb4c7356ebfe5c196!2sGral.%20G%C3%BCemes%20846%2C%20Justiniano%20Posse%2C%20C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1658702009170!5m2!1ses!2sar"
-                    width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="mapa">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3350.619368818411!2d-62.6792131!3d-32.8817889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95c950f94c6685a1%3A0xb4c7356ebfe5c196!2sGral.%20G%C3%BCemes%20846%2C%20Justiniano%20Posse%2C%20C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1658702009170!5m2!1ses!2sar"
+                        width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
             </div>
-        </div>
 
-        <div class="row">
+        </div>
+        <!--FIN DE QUIENES SOMOS Y DONDE ENCONTRARNOS-->
+        <!--productos-->
+        <div class="row ">
             <div class="col">
                 <h2 id="productos" style="text-align: center;">NUESTROS PRODUCTOS</h2>
                 <ul class="contenedor">
@@ -72,20 +81,51 @@
                     <li class="lista "><a class="a" href="sorrentinos.html" target="_blank">SORRENTINOS</a></li>
                     <li class="lista "><a class="a" href="Noquis.html">ÑOQUIS</a></li>
                 </ul>
+            
             </div>
         </div>
-
-
-
-
-
- 
-
-
-
-
-
     </div>
+
+    <!--Contactanos-->
+    <div class="container --Contactanos--">
+        <div class="row align-items-center py-4" style="background-color: rgba(178, 171, 171, 0.689);  ">
+            <div class="col">
+                <h2>Contáctanos</h2>
+                <form class="row g-3">
+                    <div class="col-md-6">
+                        <label for="name" class="form-label"> Nombre</label>
+                        <input type="text" class="form-control" id="nombre">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="apellido" class="form-label"> Apellido</label>
+                        <input type="text" class="form-control" id="apellido">
+                    </div>
+                    <div class="col-12">
+                        <label for="email" class="form-label"> Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="email@email.com">
+                    </div>
+                    <div class="col-md-12">
+                        <label for="tel" class="form-label"> Telefono</label>
+                        <input type="text" class="form-control" id="tel" placeholder=".....">
+                    </div>
+                    <div class="col-md-12">
+                        <label for="mensaje" class="form-label">Mensaje</label>
+                        <textarea class="form-control" id="mensaje" rows="3"></textarea>
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary"> Enviar</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
 
     <footer style="background-color: gray; "> Esto es un pie de página</footer>
 
