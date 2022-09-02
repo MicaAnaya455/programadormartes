@@ -1,6 +1,6 @@
 body{
     font-family: 'Open Sans', sans-serif;
-    background-image: url(img/fondo.svg) ;
+    background-image: url(/images/fondo.svg) ;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -11,7 +11,7 @@ body{
 /*INICIO QUIENES SOMOS Y DONDE ENCONTRARNOS-->*/
 #div1{
    
-    margin-top: 70px;
+    margin-top: 20px;
     text-align: center;
 }
 
