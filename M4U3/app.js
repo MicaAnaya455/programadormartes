@@ -9,6 +9,7 @@ var pool = require('./models/bs');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+const { mainModule } = require('process');
 
 var app = express();
 
@@ -25,34 +26,43 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
-//select
-//pool.query('select * from empleados').then(function (resultados){
-//  console.log(resultados)
-//});
-
-//insert
 /*
+pool.query('select  nombre from empleados where nombre = "martita"').then(function (resultados){
+ console.log(resultados)
+});
+
+
 var obj = {
-  nombre: 'Micaela',
-  apellido: 'Anaya',
-  trabajo: 'atención al publico',
-  edad: 20,
-  salario: 50000,
-  mail: 'micaela@bignet.comn'
+  nombre: 'Martita',
+  apellido: 'Suculenta',
+  trabajo: 'Planta aestetic',
+  edad: 15,
+  salario: 40,
+  mail: 'martitalasuculenta@bignet.com'
 }
 
 pool.query("insert into empleados set ?" , [obj]).then(function(resultados){
   console.log(resultados);
-})*/
-
-//delete
-var id = 26;
-pool.query("delete from empleados where id_emp = ?", [id]).then(function(resultados) {
-  console.log(resultados);
 })
 
+/*
+var id = 22;
+pool.query("delete from empleados where id_emp = ?", [id]).then(function(resultados) {
+ console.log(resultados);
+})*/
 
 
+var id= 27;
+var obj= {
+  trabajo:'Presidente',
+  salario: '80000',
+  
+ 
+}
+
+pool.query("update empleados set? where id_emp=?", [obj, id]).then(function(resultados){
+  console.log(resultados);
+})
 
 
 
