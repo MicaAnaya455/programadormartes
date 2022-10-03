@@ -10,4 +10,4 @@ async function getUserAndPassword(user, password) {
         console.log(error)
     }
 }
-module.exports = {getUserAndPassword}
+module.exports =  { getUserAndPassword }
