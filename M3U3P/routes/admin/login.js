@@ -7,6 +7,13 @@ router.get('/', function(req, res, next)  {
         layout: 'admin/layout',
     });
   });
+
+  router.get('/logout', function (req, res, next){
+    req.session.destroy();
+    res.render('admin/login', {
+        layout: 'admin/layout'
+    });
+  });
 //a traves del metodo post va a recibir la info
 
 router.post('/', async (req, res, next) =>{
@@ -18,8 +25,9 @@ router.post('/', async (req, res, next) =>{
         
         var data = await usuariosModel.getUserAndPassword(usuario, password); 
 
-        if (data != undefined){ //si la info que recibi es diferente a la de undefined me va a redireccionar a la pagina admin/login
-           
+        if (data != undefined) { //si la info que recibi es diferente a la de undefined me va a redireccionar a la pagina admin/login
+            req.session.id_usuario = data.id; //id es el nombre de la columna
+            req.session.nombre = data.usuario;
             res.redirect('/admin/novedades');
             
         }else{
