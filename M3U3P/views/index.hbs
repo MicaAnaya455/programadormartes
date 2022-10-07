@@ -2,8 +2,8 @@
 <div class="container">
     <div id="div1" class="row">
         <img class="logo" src="/images/logo.png">
-        
-        <h1 class="titulo" >DON ANTONIO</h1>
+
+        <h1 class="titulo">DON ANTONIO</h1>
         <h2>Fábrica de Pastas</h2>
 
         <div class="col" style="padding: 20px;">
@@ -39,6 +39,42 @@
         </div>
     </div>
 </div>
+<!--NOVEDADES-->
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h2 style="text-align: center; "> Nosotros con vos</h2>
+            <ul class="lista-novedades">
+                {{#each novedades}}
+                <li><a href="#" data-bs-toggle="modal" data-bs-target="#Modal{{id}}">{{titulo}}</a></li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</div>
+<!--FIN NOVEDADES-->
+<!--INICIO MODAL-->
+{{#each novedades}}
+<div class="modal fade" id="Modal{{id}}" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">{{titulo}}</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h4>{{subtitulo}}</h4>
+                <p>{{cuerpo}}</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+{{/each}}
+<!--FIN MODAL-->
+
 <!--Contactanos-->
 <div class="container --Contactanos--">
     <div class="row align-items-center py-4" style="background-color: rgba(178, 171, 171, 0.689);  ">

@@ -8,6 +8,29 @@ body{
     margin-top: 60px;
      
 }
+/*NOVEDADES*/
+.lista-novedades{
+    text-align: center;
+    list-style: none;
+}
+.lista-novedades li {
+ margin:4px 0;
+}
+.lista-novedades li a{
+    background-color: #ffff;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    color:#656464;
+    font-size: 1.4rem;
+    transition: all .2s ease-in-out;
+    display: block;
+    margin-top: 10px;
+}
+.lista-novedades li a:hover {
+    filter: none;
+    margin-right: 1.6rem;
+    opacity:1;
+}
 /*INICIO QUIENES SOMOS Y DONDE ENCONTRARNOS-->*/
 #div1{
    
@@ -32,6 +55,7 @@ body{
     
     
 }
+
 .a{
 text-decoration: none;
 color: rgb(254, 254, 254);
