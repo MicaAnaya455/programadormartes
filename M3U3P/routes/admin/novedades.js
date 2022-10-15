@@ -35,7 +35,7 @@ router.post('/agregar', async (req, res, next) => {
             res.redirect('/admin/novedades')
         } else {
             res.render('admin/agregar', {
-                layout: 'admin/agregar',
+                layout: 'admin/layout',
                 error: true,
                 message: 'Todos los campos son requeridos'
             })
