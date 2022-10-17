@@ -3,6 +3,11 @@ const pool = require('../../models/bd');
 var router = express.Router();
 var novedadesModel = require('./../../models/novedadesModel');
 
+var util = require('util');
+var cloudinary = require('cloudinary').v2;
+
+const uploader = util.promisify(cloudinary.uploader.upload);
+
 
 router.get('/', async function (req, res, next) {
 
@@ -27,11 +32,19 @@ router.get('/agregar', (req, res, next) => {
 });
 
 router.post('/agregar', async (req, res, next) => {
-
     try {
+        var img_id = '';//generamos una variable vacia
+        if (req.files && Object.keys(req.files).lenght > 0) {
+            imagen = req.files.imagen; //var que captura imagen
+            img_id = (await uploader(imagen.tempFilePath)).public_id;
+        }
+
         // console.log(req.body) 
         if (req.body.tiulo != "" && req.body.subtiutlo != "" && req.body.cuerpo != "") {
-            await novedadesModel.insertNovedad(req.body);
+            await novedadesModel.insertNovedad({
+                ...req.body, //me esta trayendo titulo, subtitulo y cuerpo + lo que pase en imagen 
+                img_id
+            });
             res.redirect('/admin/novedades')
         } else {
             res.render('admin/agregar', {

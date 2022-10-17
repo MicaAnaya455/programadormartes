@@ -4,13 +4,17 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 require('dotenv').config();
+var session = require('express-session');
+var fileUpload = require('express-fileupload');
+
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var loginRouter = require('./routes/admin/login');
 var adminRouter = require('./routes/admin/novedades');
 
 
-var session = require('express-session');
+
 
 var historiaRouter = require('./routes/historia');
 var raviolonesRouter = require('./routes/raviolones');
@@ -47,7 +51,10 @@ secured = async (req, res, next) => {
     console.log(error);
   }
 }
-
+app.use(fileUpload({
+    useTempFiles: true,
+    tempFileDir: '/tmp/'
+}));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
