@@ -101,21 +101,22 @@ router.get('/modificar/:id', async (req, res, next) => {
 
 router.post('/modificar', async (req, res, next) => {
     try {
-        let img_id = req.body.img_original;
-        let borrar_img_vieja = false;
-        if(req.body.img_delete === "1"){
-            img_id = null;
-            borrar_img_vieja = true;
-        } else {
-            if(req.files && Object.keys(req.files).length > 0){
-                imagen = req.files.imagen;
-                img_id = (await uploader(imagen.tempFilePath)).public_id;
+            let img_id = req.body.img_original;
+            let borrar_img_vieja = false;
+            if (req.body.img_delete === "1"){
+                img_id = null;
                 borrar_img_vieja = true;
+
+            }else{
+                if(req.files && Object.keys(req.files).length > 0){
+                    imagen = req.files.imagen;
+                    img_id = (await uploader(imagen.tempFilePath)).public_id;
+                    borrar_img_vieja = true;
+                }
             }
-        }
-        if (borrar_img_vieja && req.body.img_original){
-            await(destroy(req.body.img_original));
-        }
+            if (borrar_img_vieja && req.body.img_original){
+                await (destroy(req.body.img_original));
+            }
 
 
         var obj = {
