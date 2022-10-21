@@ -106,7 +106,29 @@ html{
 }
 .historia{
     text-align: center;
+    
    
+}
+.recuadroblanco{
+    margin-bottom: 20px;
+    position: relative;
+    margin-left: 25px;
+    
+
+}
+
+.primer{
+    height: 180px;
+    padding: 5px;
+}
+.primer2{
+    height: 180px;
+    width: 250px;
+    padding: 5px;
+}
+.primer3{
+    height: 180px;
+    padding: 5px;
 }
 .primero{
     background-color: rgb(176, 174, 174);
