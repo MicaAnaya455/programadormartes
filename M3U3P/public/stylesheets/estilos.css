@@ -6,6 +6,7 @@ body{
     background-position: center;
     background-size: cover;
     margin-top: 60px;
+  
      
 }
 /*NOVEDADES*/
@@ -59,7 +60,9 @@ body{
 .a{
 text-decoration: none;
 color: rgb(254, 254, 254);
-
+}
+.a:hover{
+    color:antiquewhite;
 }
 .contenedor{
     margin-top: 50px;
@@ -73,9 +76,14 @@ footer{
     position: absolute;
     bottom: 50;
     width: 100%;
-    
-    
-    
+}
+.informacion{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;   
+
 }
 .logo{
     width: 200px;
@@ -83,8 +91,13 @@ footer{
     margin-right: auto;
     margin-left: auto;
 }
+.card{
+    padding: 20px;
+   
+}
+
 .card-img-top{
-    width: 50%;
+    width: 200px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -155,4 +168,10 @@ h5{
     margin-bottom: auto;
     border-radius: 2px;
     
+}
+.noquis{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 112px;
 }

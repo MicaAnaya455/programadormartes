@@ -1,10 +1,10 @@
-<div class="container" style="margin-top: 50px;">
+<div class="container" style="margin-top: 50px; ">
     <div class="row">
         <!--Fila1-->
         <div class="col">
             <p class="text-end">
-                <span>Hola {{usuario}}!</span>
-                <a href="/admin/login/logout" class="btn btn-secondary" style="margin-left: 8px;">Cerrar sesión <i
+                <span style="font-size:30px;">¡Hola {{usuario}}!</span>
+                <a href="/admin/login/logout" class="btn btn-secondary" style="margin-left: 10px;">Cerrar sesión <i
                         class="fas fa-sign-out-alt "></i></a>
             </p>
         </div>
@@ -20,7 +20,7 @@
         </div>
     </div><!-- fin Fila2-->
     <!--Fila 3 tabla-->
-    <div class="row">
+    <div class="row" style="margin-bottom: 51px;">
         <div class="col">
             <table class="table " style="margin-top: 10px;">
                 <thead>
@@ -36,13 +36,15 @@
                     <tr class="table-light">
                         <th scope="row">{{id}}</th>
                         <td>{{titulo}}</td>
-                        <td >{{{imagen}}}</td>
+                        <td>{{{imagen}}}</td>
                         <td class="text-end">
-                            <a href="/admin/novedades/modificar/{{id}} " class="btn btn-secondary"><i class="fas fa-pencil-alt"></i></a>
-                            <a href="/admin/novedades/eliminar/{{id}} " class="btn btn-secondary"><i class="fas fa-trash"></i></a>
+                            <a href="/admin/novedades/modificar/{{id}} " class="btn btn-secondary"><i
+                                    class="fas fa-pencil-alt"></i></a>
+                            <a href="/admin/novedades/eliminar/{{id}} " class="btn btn-secondary"><i
+                                    class="fas fa-trash"></i></a>
 
                         </td>
-                        
+
                     </tr>
                     {{/each}}
                 </tbody>

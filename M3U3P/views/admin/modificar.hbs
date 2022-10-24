@@ -1,4 +1,5 @@
 <div class="container">
+
     <form action="/admin/novedades/modificar" enctype="multipart/form-data" method="post" style="margin: 100px ;">
         <h2 style="margin-top: 10px;">Modificar la novedad</h2>
         <input type="hidden" value="{{novedad.id}}" name="id">
@@ -25,8 +26,10 @@
             </div>
 
             <button type="submit" class="btn btn-outline-dark" style="margin-top: 10px;">Modificar</button>
+        </div>
     </form>
     {{#if error}}
     <p>{{message}}</p>
     {{/if}}
+
 </div>
